@@ -2,26 +2,28 @@
 package main
 
 import (
-	"io"
-	"log"
+	"encoding/json"
 	"net/http"
 	"net/http/httptest"
-	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
-func TestPostTodo(t *testing.T) {
+func TestJsonHandler(t *testing.T) {
 	assert := assert.New(t)
 
 	res := httptest.NewRecorder()
-	req := httptest.NewRequest("POST", "/todos", strings.NewReader(`{"name":"ddd", "date":""}`)) // ➎ /bar 경로 테스트
+	req := httptest.NewRequest("GET", "/students", nil) // ❶ /students 경로 테스트
 
 	mux := MakeWebHandler()
 	mux.ServeHTTP(res, req)
 
-	assert.Equal(http.StatusCreated, res.Code)
-	data, _ := io.ReadAll(res.Body)
-	log.Println(string(data))
+	assert.Equal(http.StatusOK, res.Code)
+	var list []Student
+	err := json.NewDecoder(res.Body).Decode(&list) // ❷ 결과 변환
+	assert.Nil(err)                                // ❸ 결과 확인
+	assert.Equal(2, len(list))
+	assert.Equal("aaa", list[0].Name)
+	assert.Equal("bbb", list[1].Name)
 }

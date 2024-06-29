@@ -1,101 +1,32 @@
-//ch24/ex24.5/ex24.5.go
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"path/filepath"
+	"strconv"
 	"strings"
 )
 
-type LineInfo struct {
-	lineNo int
-	line   string
+func Map[F, T any](s []F, f func(F) T) []T { // 1 제네릭 함수
+	rst := make([]T, len(s))
+	for i, v := range s {
+		rst[i] = f(v)
+	}
+	return rst
 }
-
-type FindInfo struct {
-	filename string
-	lines    []LineInfo
-}
-
 func main() {
-	if len(os.Args) < 3 { //
-		fmt.Println("2개 이상의 실행인자가 필요합니다. ex) ex26.5 word filepath")
-		return
-	}
-
-	word := os.Args[1]
-	path := os.Args[2]
-
-	cnt, ch := FindWordInAllFiles(word, path)
-	recvCnt := 0
-	for findInfo := range ch {
-		fmt.Println(findInfo.filename)
-		fmt.Println("--------------------------------")
-		for _, lineInfo := range findInfo.lines {
-			fmt.Println("\t", lineInfo.lineNo, "\t", lineInfo.line)
-		}
-		fmt.Println("--------------------------------")
-		fmt.Println()
-		recvCnt++
-		if recvCnt == cnt {
-			// all received
-			break
-		}
-	}
-}
-
-func GetFileList(pattern string) ([]string, error) {
-	filelist := []string{}
-	err := filepath.Walk(".", func(path string, info os.FileInfo, err error) error {
-		if !info.IsDir() {
-			matched, _ := filepath.Match(pattern, info.Name())
-			if matched {
-				filelist = append(filelist, path)
-			}
-		}
-		return nil
+	// 2 각 값을 두 배씩 증가시키는 슬라이스
+	doubled := Map([]int{1, 2, 3}, func(v int) int {
+		return v * 2
 	})
-	if err != nil {
-		return []string{}, err
-	}
-	return filelist, nil
-}
-
-func FindWordInAllFiles(word, path string) (int, chan FindInfo) {
-	filelist, err := GetFileList(path) // 실행인자 가져오기
-	if err != nil {
-		fmt.Println("파일을 찾을 수 없습니다. err:", err)
-		return 0, nil
-	}
-
-	ch := make(chan FindInfo)
-	cnt := len(filelist)
-	for _, filename := range filelist {
-		go FindWordInFile(word, filename, ch)
-	}
-	return cnt, ch
-}
-
-func FindWordInFile(word, filename string, ch chan FindInfo) {
-	findInfo := FindInfo{filename, []LineInfo{}}
-	file, err := os.Open(filename)
-	if err != nil {
-		fmt.Println("파일을 찾을 수 없습니다. ", filename)
-		ch <- findInfo
-		return
-	}
-	defer file.Close()
-
-	lineNo := 1
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		line := scanner.Text()
-		if strings.Contains(line, word) {
-			findInfo.lines = append(findInfo.lines, LineInfo{lineNo, line})
-		}
-		lineNo++
-	}
-	ch <- findInfo
+	// 3 대문자로 변경하는 슬라이스
+	uppered := Map([]string{"hello", "world", "abc"}, func(v string) string {
+		return strings.ToUpper(v)
+	})
+	// 4 문자열로 변경하는 슬라이스
+	tostring := Map([]int{1, 2, 3}, func(v int) string {
+		return "str" + strconv.Itoa(v)
+	})
+	fmt.Println(doubled)
+	fmt.Println(uppered)
+	fmt.Println(tostring)
 }

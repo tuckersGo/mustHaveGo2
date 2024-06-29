@@ -1,25 +1,21 @@
-//ch26/ex26.2//ex26.2.go
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-)
+import "fmt"
 
-func main() {
-	PrintFile("hamlet.txt")
+// 1 제네릭 함수를 이용해서 Print() 함수 정의
+func Print[T1 any, T2 any](a T1, b T2) {
+	fmt.Println(a, b)
 }
-func PrintFile(filename string) {
-	file, err := os.Open(filename) // ❶ 파일 열기
-	if err != nil {
-		fmt.Println("파일을 찾을 수 없습니다. ", filename)
-		return
-	}
-	defer file.Close() // ❷ 함수 종료 전에 파일 닫기
-
-	scanner := bufio.NewScanner(file) // ❸ 스캐너를 생성해서 한 줄씩 읽기
-	for scanner.Scan() {
-		fmt.Println(scanner.Text())
-	}
+func Print2(a, b interface{}) { // 2 빈 인터페이스를 이용해서 Print2() 함수 정의
+	fmt.Println(a, b)
+}
+func main() {
+	Print(1, 2)
+	Print(3.14, 1.43)
+	Print("Hello", "World")
+	Print(1, "Hello")
+	Print2(1, 2)
+	Print2(3.14, 1.43)
+	Print2("Hello", "World")
+	Print2(1, "Hello")
 }

@@ -1,8 +1,9 @@
-//ch28/ex28.1/ex28.1.go
+//ch28/ex28.7/ex28.7.go
 package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -11,5 +12,8 @@ func main() {
 		fmt.Fprint(w, "Hello World") // ❶ 웹 핸들러 등록
 	})
 
-	http.ListenAndServe(":3000", nil) // ❷ 웹 서버 시작
+	err := http.ListenAndServeTLS(":3000", "localhost.crt", "localhost.key", nil) // ❷ 웹 서버 시작
+	if err != nil {
+		log.Fatal(err)
+	}
 }

@@ -1,4 +1,4 @@
-//ch12/ex12.2/ex12.2.go
+//ch10/ex10.2/ex10.2.go
 package main
 
 const Y int = 3 // ❶ 상수

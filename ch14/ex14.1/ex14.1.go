@@ -1,4 +1,4 @@
-//ch16/ex16.1/ex16.1.go
+//ch14/ex14.1/ex14.1.go
 package main
 
 import ( // ❶ 둘 이상의 패키지는 소괄호로 묶어줍니다.

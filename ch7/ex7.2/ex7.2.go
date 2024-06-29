@@ -1,4 +1,4 @@
-//ch9/ex9.2/ex9.2.go
+//ch7/ex7.2/ex7.2.go
 package main
 
 import "fmt"

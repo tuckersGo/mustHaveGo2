@@ -1,4 +1,4 @@
-//ch18/ex18.12/ex18.12.go
+//ch16/ex16.12/ex16.12.go
 package main
 
 import (

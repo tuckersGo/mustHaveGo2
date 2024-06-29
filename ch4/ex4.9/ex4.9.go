@@ -1,4 +1,4 @@
-//ch6/ex6.9/ex6.9.go
+//ch4/ex4.9/ex4.9.go
 package main
 
 import (

@@ -1,4 +1,4 @@
-//ch26/ex26.4/ex26.4.go
+//ch24/ex24.4/ex24.4.go
 package main
 
 import (

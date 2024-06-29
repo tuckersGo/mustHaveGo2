@@ -1,4 +1,4 @@
-//ch20/ex20.2/ex20.2.go
+//ch18/ex18.2/ex18.2.go
 package main
 
 import "github.com/tuckersGo/musthaveGo/ch20/fedex"

@@ -1,4 +1,4 @@
-//ch31/ex31.1/ex31_1_test.go
+//ch29/ex29.1/ex29_1_test.go
 package main
 
 import (

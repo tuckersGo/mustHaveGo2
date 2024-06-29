@@ -1,4 +1,4 @@
-//ch29/ex29.4/ex29.4.go
+//ch27/ex27.4/ex27.4.go
 package main
 
 import "net/http"

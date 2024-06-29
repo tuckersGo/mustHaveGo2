@@ -1,8 +1,8 @@
-//ch16/ex16.3/ex16.3.go
+//ch14/ex14.3/ex14.3.go
 package main
 
 import (
-	"ch16/ex16.3/exinit" // ⓬ exinit 패키지 임포트
+	"ch14/ex14.3/ex14init" // ⓬ exinit 패키지 임포트
 	"fmt"
 )
 

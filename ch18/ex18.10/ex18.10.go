@@ -1,4 +1,4 @@
-//ch20/ex20.10/ex20.10.go
+//ch18/ex18.10/ex18.10.go
 package main
 
 type Reader interface {

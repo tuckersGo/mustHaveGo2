@@ -65,6 +65,10 @@ github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcU
 github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
 github.com/stretchr/testify v1.9.0 h1:HtqpIVDClZ4nwg75+f6Lvsy/wHu+3BoSGCbBAcpTsTg=
 github.com/stretchr/testify v1.9.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
+github.com/tuckersGo/musthaveGo2/ch18/fedex v0.0.0-20240704043416-b81d3c9fc9db h1:/TZDD1n9WcNf6lEm+GZ6wY4l/JM6lr/GzXoG7VQFeSc=
+github.com/tuckersGo/musthaveGo2/ch18/fedex v0.0.0-20240704043416-b81d3c9fc9db/go.mod h1:yBuwjzl4PMCQ2w8tFg1kIhutV22/JDopj7+2e+vAt8g=
+github.com/tuckersGo/musthaveGo2/ch18/koreaPost v0.0.0-20240704043416-b81d3c9fc9db h1:uB+YCvCTSSHEVc0MKa1atCB3uaRGLbrmziMJ1Pja1p4=
+github.com/tuckersGo/musthaveGo2/ch18/koreaPost v0.0.0-20240704043416-b81d3c9fc9db/go.mod h1:BqGmuUcY5pn537NqzAPTz6Ch44kFmyWNiy1RJ0i+HKo=
 github.com/twitchyliquid64/golang-asm v0.15.1 h1:SU5vSMR7hnwNxj24w34ZyCi/FmDZTkS4MhqMhdFk5YI=
 github.com/twitchyliquid64/golang-asm v0.15.1/go.mod h1:a1lVb/DtPvCB8fslRZhAngC2+aY1QWCk3Cedj/Gdt08=
 github.com/ugorji/go/codec v1.2.11 h1:BMaWp1Bb6fHwEtbplGBGJ498wD+LKlNSl25MjdZY4dU=

@@ -1,6 +1,6 @@
 module github.com/tuckersGo/musthaveGo/v2
 
-go 1.21
+go 1.22.4
 
 require (
 	github.com/gin-gonic/gin v1.9.1
@@ -30,6 +30,8 @@ require (
 	github.com/panjf2000/gnet/v2 v2.5.5 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/tuckersGo/musthaveGo2/ch18/fedex v0.0.0-20240704043416-b81d3c9fc9db // indirect
+	github.com/tuckersGo/musthaveGo2/ch18/koreaPost v0.0.0-20240704043416-b81d3c9fc9db // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.11 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect

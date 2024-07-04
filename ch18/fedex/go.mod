@@ -1,3 +1,3 @@
-module github.com/tuckersGo/musthaveGo/ch20/fedex
+module github.com/tuckersGo/musthaveGo2/ch18/fedex
 
-go 1.16
+go 1.22.4

@@ -1,9 +1,9 @@
-//ch18/ex18.4/ex18.4.go
+// ch18/ex18.4/ex18.4.go
 package main
 
 import (
-	"github.com/tuckersGo/musthaveGo/ch20/fedex"
-	"github.com/tuckersGo/musthaveGo/ch20/koreaPost"
+	"github.com/tuckersGo/musthaveGo2/ch18/fedex"
+	"github.com/tuckersGo/musthaveGo2/ch18/koreaPost"
 )
 
 // ❶ Sender 인터페이스를 만들었습니다.

@@ -1,7 +1,7 @@
-//ch18/ex18.2/ex18.2.go
+// ch18/ex18.2/ex18.2.go
 package main
 
-import "github.com/tuckersGo/musthaveGo/ch20/fedex"
+import "github.com/tuckersGo/musthaveGo2/ch18/fedex"
 
 func SendBook(name string, sender *fedex.FedexSender) {
 	sender.Send(name)

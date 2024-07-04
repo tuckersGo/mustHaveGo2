@@ -1,9 +1,9 @@
-//ch18/ex18.3/ex18.3.go
+// ch18/ex18.3/ex18.3.go
 package main
 
 import (
-	"github.com/tuckersGo/musthaveGo/ch20/fedex"
-	"github.com/tuckersGo/musthaveGo/ch20/koreaPost"
+	"github.com/tuckersGo/musthaveGo2/ch18/fedex"
+	"github.com/tuckersGo/musthaveGo2/ch18/koreaPost"
 )
 
 func SendBook(name string, sender *fedex.FedexSender) {

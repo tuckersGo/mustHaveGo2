@@ -1,3 +1,3 @@
-module github.com/tuckersGo/musthaveGo/ch16/expkg
+module github.com/tuckersGo/musthaveGo2/ch14/expkg
 
 go 1.16

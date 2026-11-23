@@ -1,4 +1,4 @@
-//ch3/ex3.8/ex3.8.go
+// ch3/ex3.8/ex3.8.go
 package main
 
 import (
@@ -15,14 +15,14 @@ func main() {
 
 	n, err := fmt.Scanln(&a, &b)
 	if err != nil { // 에러 발생 시
-		fmt.Println(err)       // 에러 출력
+		fmt.Println(n, err)    // 에러 출력
 		stdin.ReadString('\n') // ❸ 표준 입력 스트림 지우기
 	} else {
 		fmt.Println(n, a, b)
 	}
 	n, err = fmt.Scanln(&a, &b) // ❹ 다시 입력받기
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println(n, err)
 	} else {
 		fmt.Println(n, a, b)
 	}
